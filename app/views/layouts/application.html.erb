@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ContactocoachingPe</title>
+  
+  
+
+  <%= stylesheet_link_tag '/javascripts/adapt/adapt.css' %>
+  <%= stylesheet_link_tag '/javascripts/accordion/themes/base/jquery.ui.all.css', 'style.css' %>
+
+  <%= javascript_include_tag '/javascripts/jquery.js', '/javascripts/jquery-ui.js', '/javascripts/jquery_ujs' %>
+  <%= javascript_include_tag '/javascripts/adapt/adapt-init.js', '/javascripts/adapt/adapt.min.js' %>
+  <%= javascript_include_tag '/javascripts/accordion/ui/jquery.ui.core.js', '/javascripts/accordion/ui/jquery.ui.widget.js', '/javascripts/accordion/ui/jquery.ui.accordion.js' %>
+  <%= javascript_include_tag 'application.js' %>
+
+  <%= csrf_meta_tag %>
+</head>
+<body id="<%= body_id %>" class="<%= body_class %>">
+
+
+
+<div id="container-bg1">
+  <div id="container-bg2">
+
+    <div class="container_12">
+      <!-- START: sidebar-first -->
+      <div id="sidebar-first" class="grid_4">
+        <div id="header">
+          <%= render 'layouts/menu' %>  
+          <%= link_to image_tag("logo.png"), root_path, :id => 'logo' %>
+        
+        </div>
+
+
+     </div>
+     <!-- END: sidebar-first -->
+     
+     <!-- START: sidebar-second -->
+     <div id="sidebar-second" class="grid_7">
+       <div id="preface-top">
+         <%= render 'layouts/menu-language' %>
+       </div>
+       
+       <div id="content" class="grid_6 prefix_1">
+         <%= yield %>
+       </div>
+     </div>
+     <!-- END: sidebar-second -->
+
+
+    </div>
+    <!-- END: container_12 -->
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

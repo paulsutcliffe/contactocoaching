@@ -1,0 +1,23 @@
+<div id="accordion">
+	<% @teams.each do |team| %>
+	       <h3><span class="borde"><%= team.name %></span></h3>
+	       <div>
+		  <% if !session[:user_id].blank? %>
+          <div class="admin-controls">
+            <%= link_to 'Editar', edit_team_path(team), :class => 'btn edit' %>
+          </div>
+          <% end %>
+		          <p class="grid_5 alpha">
+		            <%= team.description %>
+		          </p>
+                  <%= image_tag(team.photo(:photo))  %>
+	       </div>
+	<% end %>
+</div>
+
+
+<% if !session[:user_id].blank? %>
+<div class="admin-controls">
+<%= link_to 'Agregar Integrante', new_team_path, :class => 'btn new' %>
+</div>
+<% end %>

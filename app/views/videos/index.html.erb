@@ -1,0 +1,26 @@
+<% if !session[:user_id].blank? %>
+  <div class="admin-controls">
+    <%= link_to 'Agregar Video', new_video_path, :class => 'btn add' %>
+  </div>
+<% end %>
+
+<div id="accordion">
+
+<% @videos.each do |video| %>
+  <h3>
+	<span class="borde">
+      <%= video.title %>
+    </span>
+  </h3>
+	
+    <div>
+	  <% if !session[:user_id].blank? %>
+	    <div class="admin-controls">
+          <%= link_to 'Editar', edit_video_path(video), :class => 'btn edit' %>
+        </div>
+      <% end %>
+      <%= video.url_html %>
+    </div>         
+<% end %>
+</div>
+

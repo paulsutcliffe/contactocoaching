@@ -1,0 +1,39 @@
+<% @whatdowedos.each do |whatdowedo| %>
+  <h2 class="title">
+           <%= whatdowedo.title %>
+         </h2>
+<% if !session[:user_id].blank? %>
+<%= link_to 'Editar', edit_whatdowedo_path(whatdowedo) %>
+<% end %>
+         <ol>
+           <li>
+             <p>
+               <%= simple_format(whatdowedo.description) %>
+             </p>
+           </li>
+           
+           </li>
+         
+         </ol>
+<% end %>
+<table>
+  <!--
+
+<% @whatdowedos.each do |whatdowedo| %>
+  <tr>
+    <td><%= whatdowedo.title %></td>
+    <td><%= whatdowedo.description %></td>
+    <td><%= link_to 'Show', whatdowedo %></td>
+    <td><%= link_to 'Edit', edit_whatdowedo_path(whatdowedo) %></td>
+    <td><%= link_to 'Destroy', whatdowedo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+-->
+</table>
+
+<br />
+
+<% if !session[:user_id].blank? %>
+<%= link_to 'New Whatdowedo', new_whatdowedo_path %>
+<% end %>

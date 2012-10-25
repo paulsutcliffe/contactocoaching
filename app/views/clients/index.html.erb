@@ -1,0 +1,23 @@
+<div id="accordion">
+	<% @clients.each do |client| %>
+	  <h3><span class="borde"><%= client.name %></span></h3>
+      
+      <div>
+	  <% if !session[:user_id].blank? %>
+        <div class="admin-controls">
+          <%= link_to 'Editar', edit_client_path(client), :class => 'btn edit' %>
+        </div>
+      <% end %>
+        <p class="grid_5 alpha">
+          <%= client.description %>
+        </p>
+      </div>
+    <% end %>
+</div>
+
+
+<% if !session[:user_id].blank? %>
+<div class="admin-controls">
+<%= link_to 'Agregar Cliente', new_client_path, :class => 'btn add' %>
+</div>
+<% end %>

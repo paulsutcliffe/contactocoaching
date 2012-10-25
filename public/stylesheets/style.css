@@ -1,0 +1,413 @@
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin:0; padding:0}
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+
+
+
+
+/*
+=============================================
+01. global
+=============================================
+*/
+
+#container{/*background:rgba(0,0,0,0.5)*/}
+a{text-decoration:none}
+p{margin-top:0}
+p, span, a, h1, h2, h3, h4, h5, h6{text-align:justify; color:blue; font:normal bold 1.4em/1.45em Georgia, "Times New Roman", Times, serif}
+span{text-align:left}
+
+h2, h3{font-weight:normal; line-height:100%}
+
+a{
+  -moz-transition: all 0.3s ease-out;  /* FF3.7+ */
+  -o-transition: all 0.3s ease-out;  /* Opera 10.5 */
+  -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+  transition: all 0.3s ease-out; 
+}
+
+li{list-style:none}
+
+
+
+/*
+=============================================
+HEADINGS
+=============================================
+*/
+
+
+h2.title{font-size:2em; color:#ed1846; border-bottom:3px solid}
+
+
+/*
+=============================================
+FONT 
+=============================================
+*/
+
+@font-face {
+    font-family: 'ClarendonBlkBTBlack';
+    src: url('../fonts/clrndnk-webfont.eot');
+    src: url('../fonts/clrndnk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/clrndnk-webfont.woff') format('woff'),
+         url('../fonts/clrndnk-webfont.ttf') format('truetype'),
+         url('../fonts/clrndnk-webfont.svg#ClarendonBlkBTBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p, span, a, h1, h2, h3, h4, h5, h6{font-family:'ClarendonBlkBTBlack'; font-weight:normal}
+
+/*
+=============================================
+FONT COLORS
+=============================================
+*/
+
+
+/* red */
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited /* accordion headings */
+{color:#ed1846}
+
+
+/* blue */
+p,
+ul#menu li a{color:#004282}
+
+
+/*
+=============================================
+PAGE COLORS
+=============================================
+*/
+
+/* blue */
+ul#languages{border-color:#004282}
+
+/* blue */
+ul#languages li span{background:#004282}
+h2.title{border-color:#004282}
+
+/*
+=============================================
+ADAPT
+=============================================
+*/
+
+#container-bg1,
+#container-bg2,
+.container_12{height:auto !important; height:960px; min-height:960px}
+
+html#range_3 #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png); background-repeat:no-repeat; background-position: 400px -320px}
+html#range_3 #container-bg2{background-image:url(../images/backgrounds/range-3-red.png); background-repeat: no-repeat; background-position: -500px -400px}
+
+/* INDEX */
+html#range_3 #whatwedos #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+
+/* QUÉ HACEMOS */
+html#range_3 #whatwedos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+
+/* HOW */
+html#range_3 #how #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+
+/* CLIENTS */
+html#range_3 #clients #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+
+/* CLIENTS */
+html#range_3 #teams #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+
+/* VIDEOS */
+html#range_3 #videos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+
+
+
+
+
+
+
+
+.ui-accordion .ui-accordion-content{padding-left:0; padding-right:0}
+
+.container_12{}
+
+
+/*
+=============================================
+HEADER
+=============================================
+*/
+
+#header{height:650px; position:relative}
+#header #logo{position:absolute; bottom:0; left:0px}
+
+
+/*
+=============================================
+MENÚ MAIN
+=============================================
+*/
+
+ul#menu{position:absolute; top:80px; left:30px}
+ul#menu li{}
+ul#menu li a,
+ul#menu li span{font-size:1.8em}
+ul#menu li a.active{color:white}
+ul#menu li span{color:white}
+
+
+/*
+=============================================
+MENÚ LANGUAGES
+=============================================
+*/
+
+ul#languages{width:390px; height:46px; border:1px solid; float:right}
+ul#languages li{width:50%; height:46px; float:left}
+ul#languages li a,
+ul#languages li span{width:100%; height:46px; float:left; font-size:1.4em; line-height:270%; text-align:center}
+ul#languages li span{color:white}
+
+
+/*
+=============================================
+PREFACE-TOP
+=============================================
+*/
+
+#preface-top{height:150px}
+
+/*
+=============================================
+ACCORDION
+=============================================
+*/
+
+
+#accordion img{float:left}
+
+.ui-widget-content{background:none; border:0}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{background:none; border:0}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{background:none; border:0}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br,
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl{border-radius:0}
+.ui-accordion-icons .ui-accordion-header a{padding-left:0}
+.ui-accordion .ui-accordion-header span.borde{padding-right:0}
+
+/* header */
+.ui-accordion .ui-accordion-header{font:normal normal 1.4em/1.45em Georgia, "Times New Roman", Times, serif}
+.ui-accordion .ui-accordion-header span.borde{padding-right:45px; border-bottom:3px solid #004282}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{display:inline}
+
+.ui-accordion .ui-accordion-header a{display:inline}
+
+/* arrow icon */
+.ui-accordion .ui-accordion-header .ui-icon{left:auto; right:0}
+
+
+/*
+=============================================
+QUÉ HACEMOS
+=============================================
+*/
+
+#whatwedo h2{}
+#howdowedos h2.title:nth-of-type(1){display:none}
+
+/*
+=============================================
+CLIENTES
+=============================================
+*/
+
+#clients h3{text-align:left}
+#accordion{float:left}
+
+/*
+=============================================
+CONTÁCTANOS
+=============================================
+*/
+
+#addresses h2.title{color:#ed1846; border:none}
+
+
+/*
+=============================================
+FORM
+=============================================
+*/
+
+form{border:1px solid #fff; padding:30px; background:#ed1846; float:left}
+.field,
+.actions{float:left; clear:left; margin-bottom:5px}
+.field label{width:100px; float:left; color:white; font-size:16px}
+.field input,
+.field textarea{width:400px; float:left}
+.actions input{padding:10px 15px; border:0; background:#004282; color:white}
+
+/*
+=============================================
+LINKS
+=============================================
+*/
+
+.admin-controls{width:100%; float:left; clear:left; margin:0 0 10px 0}
+.btn,
+.btn:visited{background:#ed1846; color:white !important; padding:10px 15px !important; margin:0 0 5px 0; float:left}
+
+/*
+=============================================
+X fancy (borders, radius, shadows,...)
+=============================================
+*/
+
+/* border-radius #1 */
+#null{-moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px}
+
+/* border-radius #2 */
+#null{-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px}
+
+/* default color #1 (#bcbec0) */
+#null{border:5px solid #bcbec0}
+
+/* default color #2 (#6dcff6) */
+#null{border:0px solid #6dcff6}
+
+
+
+#null{-moz-transition:none;  /* FF3.7+ */ -o-transition:none;  /* Opera 10.5 */ -webkit-transition:none;  /* Saf3.2+, Chrome */ transition:none}
+
+/*
+=============================================
+Y fixes
+=============================================
+*/
+
+/* ie7*/
+#main-menu li{zoom:1; *display:inline}
+#main-menu li a{behavior: url(../PIE.htc)}
+

@@ -1,0 +1,13 @@
+<ul id="languages">
+  <li>
+    <%= link_to_unless I18n.locale == :en, "Inglés", :locale => "en" do %>
+      <span>Inglés</span>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to_unless I18n.locale == :sp, "Castellano", :locale => "sp" do %>
+      <span>Castellano</span>
+    <% end %>      
+  </li>
+</ul>
+

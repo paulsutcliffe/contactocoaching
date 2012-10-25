@@ -1,0 +1,27 @@
+<% @whoweares.each do |whoweare| %>
+  <h2 class="title">
+           <%= whoweare.title %>
+         </h2>
+<%= notice %>
+<% if !session[:user_id].blank? %>
+<div class="admin-controls">
+<%= link_to 'Editar', edit_whoweare_path(whoweare), :class => 'btn edit' %>
+</div>
+<% end %>
+         <ol>
+           <li>
+             <p>
+               <%= whoweare.description %>
+             </p>
+           </li>
+           
+           </li>
+         
+         </ol>
+<% end %>
+
+<% if !session[:user_id].blank? %>
+<div class="admin-controls">
+<%= link_to 'Crear Nueva Introducción', new_whoweare_path, :class => 'btn' %>
+</div>
+<% end %>
