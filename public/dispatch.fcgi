@@ -4,7 +4,7 @@
 ENV['RAILS_ENV'] ||= 'production'
 ENV['HOME'] ||= `echo ~`.strip
 ENV['GEM_HOME'] = File.expand_path('~/.gems')
-ENV['GEM_PATH'] = File.expand_path('~/.gems') + ":" + '/usr/lib/ruby/gems/1.8'require 'rubygems'
+ENV['GEM_PATH'] = File.expand_path('~/.gems') + ":" + '/usr/lib/ruby/gems/1.8'
 
 require 'rubygems'
 Gem.clear_paths
