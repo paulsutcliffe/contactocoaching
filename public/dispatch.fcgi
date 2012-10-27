@@ -1,14 +1,14 @@
 #!/usr/bin/ruby
 
-require 'rubygems'
-require 'fcgi'
+# Dreamhost clears environment variables when calling dispatch.fcgi, so set them here
+ENV['RAILS_ENV'] ||= 'production'
+ENV['HOME'] ||= `echo ~`.strip
+ENV['GEM_HOME'] = File.expand_path('~/.gems')
+ENV['GEM_PATH'] = File.expand_path('~/.gems') + ":" + '/usr/lib/ruby/gems/1.8'require 'rubygems'
 
-ENV['RAILS_ENV'] ||= 'production' 
-
-# Set GEM_PATH and GEM_HOME ("user" is your dreamhost user)
-ENV['GEM_HOME'] ||= '/home/contactocoaching/.gems'
 require 'rubygems'
 Gem.clear_paths
+require 'fcgi'
 
 require File.join(File.dirname(__FILE__), '../config/environment')
 
@@ -26,4 +26,4 @@ class Rack::PathInfoRewriter
  end
 end
 
-Rack::Handler::FastCGI.run  Rack::PathInfoRewriter.new(ContactocoachingPe::Application)
+Rack::Handler::FastCGI.run  Rack::PathInfoRewriter.new(Contactocoaching::Application)

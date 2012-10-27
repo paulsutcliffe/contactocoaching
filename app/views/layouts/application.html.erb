@@ -14,6 +14,7 @@
   <%= javascript_include_tag 'application.js' %>
   <%= yield :javascript %>
 
+  <%= favicon_link_tag "/favicon.png" %>
   <%= csrf_meta_tag %>
 </head>
 <body id="<%= body_id %>" class="<%= body_class %>">

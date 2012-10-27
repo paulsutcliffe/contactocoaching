@@ -28,6 +28,4 @@ set :use_sudo, false
 
 after 'deploy:create_symlink' do
   run "chmod 775 /home/ccoacher/contactocoaching/current/public/dispatch.fcgi"
-  run "killall -USR1 dispatch.fcgi"
-  run "killall -USR1 ruby"
 end
