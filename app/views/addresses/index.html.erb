@@ -1,4 +1,6 @@
-<% if !session[:user_id].blank? %>
+<%= page_title! "Contáctanos" %>
+
+<% if session[:user_id] %>
   <div class="admin-controls">
     <%= link_to 'Agregar Contacto', new_address_path, :class => 'btn add' %>
   </div>
@@ -6,7 +8,7 @@
 
 <ul>
 <% @addresses.each do |address| %>
-  <% if !session[:user_id].blank? %>
+  <% if session[:user_id] %>
     <div class="admin-controls">
       <%= link_to 'Editar', edit_address_path(address), :class => 'btn edit' %>
     </div>
@@ -14,6 +16,6 @@
   <li>
     <%= content_tag(:h2, address.title, :class => 'title') %>
     <%= simple_format(address.description) %>
-  </li>                 
+  </li>
 <% end %>
 </ul>

@@ -8,6 +8,7 @@
   </script>
 <% end %>
 
+<%= page_title! "Clientes" %>
 
 <div id="accordion">
 	<% @clients.each do |client| %>
@@ -21,7 +22,7 @@
         </div>
       <% end %>
         <p class="grid_5 alpha">
-          <%= client.description %>
+          <%= simple_format(client.description) %>
         </p>
         <ul>
           <% if client.photos %>
