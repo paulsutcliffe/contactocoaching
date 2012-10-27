@@ -21,9 +21,7 @@
           <%= link_to 'Fotos', client_photos_path(client) %>
         </div>
       <% end %>
-        <p class="grid_5 alpha">
           <%= simple_format(client.description) %>
-        </p>
         <ul>
           <% if client.photos %>
             <% client.photos.each do |photo| %>

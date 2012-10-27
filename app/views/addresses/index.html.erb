@@ -6,9 +6,7 @@
   </div>
 <% end %>
 
-<p>
-  <%= link_to 'Envianos un mensaje', new_contact_path, :class => 'btn add' %>
-</p>
+
 
 <ul>
 <% @addresses.each do |address| %>
@@ -23,3 +21,7 @@
   </li>
 <% end %>
 </ul>
+
+<p>
+  <%= link_to 'Envianos un mensaje', new_contact_path, :class => 'btn add' %>
+</p>
