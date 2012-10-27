@@ -32,9 +32,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: contactocoaching_production
+  database: ccoaching_production
   pool: 5
-  host: mysqlcontactocoaching.avance.kosmyka.com
-  username: contactocoaching
+  host: mysql.contactocoaching.com
+  username: ccoachingdb
   password: chimpance99
-  socket: /tmp/mysql.sock
