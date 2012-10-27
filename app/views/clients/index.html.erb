@@ -1,23 +1,42 @@
+<% content_for :javascript do %>
+  <%= stylesheet_link_tag '/javascripts/libs/lightbox/themes/white-green/jquery.lightbox.css' %>
+  <%= javascript_include_tag '/javascripts/libs/lightbox/jquery.lightbox.min.js' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      jQuery('.lightbox').lightbox();
+    })
+  </script>
+<% end %>
+
+
 <div id="accordion">
 	<% @clients.each do |client| %>
 	  <h3><span class="borde"><%= client.name %></span></h3>
-      
+
       <div>
-	  <% if !session[:user_id].blank? %>
+	  <% if session[:user_id] %>
         <div class="admin-controls">
           <%= link_to 'Editar', edit_client_path(client), :class => 'btn edit' %>
+          <%= link_to 'Fotos', client_photos_path(client) %>
         </div>
       <% end %>
         <p class="grid_5 alpha">
           <%= client.description %>
         </p>
+        <ul>
+          <% if client.photos %>
+            <% client.photos.each do |photo| %>
+              <li><%= link_to image_tag(photo.photo(:thumb)), photo.photo(:medium), :class => 'lightbox', :rel => 'gallery' %></li>
+            <% end %>
+          <% end %>
+      </ul>
       </div>
     <% end %>
 </div>
 
 
-<% if !session[:user_id].blank? %>
+<% if session[:user_id] %>
 <div class="admin-controls">
-<%= link_to 'Agregar Cliente', new_client_path, :class => 'btn add' %>
+  <%= link_to 'Agregar Cliente', new_client_path, :class => 'btn add' %>
 </div>
 <% end %>

@@ -2,8 +2,8 @@
   <h2 class="title">
            <%= howdowedo.title %>
          </h2>
-<% if !session[:user_id].blank? %>
-<%= link_to 'Editar', edit_howdowedo_path(howdowedo) %>
+<% if session[:user_id] %>
+<%= link_to 'Editar', edit_howdowedo_path(howdowedo), :class => 'btn edit' %>
 <% end %>
          <ol>
            <li>
@@ -11,31 +11,16 @@
                <%= simple_format(howdowedo.description) %>
              </p>
            </li>
-           
+
            </li>
-         
+
          </ol>
 <% end %>
-
-<table>
-  <!--
-
-<% @howdowedos.each do |howdowedo| %>
-  <tr>
-    <td><%= howdowedo.title %></td>
-    <td><%= howdowedo.description %></td>
-    <td><%= link_to 'Show', howdowedo %></td>
-    <td><%= link_to 'Edit', edit_howdowedo_path(howdowedo) %></td>
-    <td><%= link_to 'Destroy', howdowedo, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
--->
-</table>
 
 <br />
 
 
-<% if !session[:user_id].blank? %>
+<% if session[:user_id] and @howdowedos.blank? %>
 
 <%= link_to 'New Howdowedo', new_howdowedo_path %>
 

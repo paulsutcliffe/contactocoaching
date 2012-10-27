@@ -4,4 +4,14 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-ContactocoachingPe::Application.load_tasks
+module ::Contactocoaching
+  class Application
+    include Rake::DSL
+  end
+end
+
+module ::RakeFileUtils
+  extend Rake::FileUtilsExt
+end
+
+Contactocoaching::Application.load_tasks
