@@ -1,0 +1,47 @@
+<div id="container" class="grid_15 centered">
+	<div id="container-inner" class="grid_14 centered not-flow">
+    	
+        <!-- START: content -->
+    	<div id="content" class="grid_14 alpha">
+        	<h6 class="title"><%= I18n.translate('contact.new.title') %></h6>
+			<p id="notice"><%= notice %></p>
+			
+			
+				
+		<table>
+		
+			<tr>
+						<tr>
+							<td><b>Nombre</b></td><td><%= @contact.name %></td>
+						</tr>
+						<tr>
+							<td><b>Apellido</b></td><td><%= @contact.last_name %></td>
+						</tr>
+						<tr>
+							<td><b>Celular</b></td><td><%= @contact.cell %></td>
+						</tr>
+						<tr>
+							<td><b>Oficina</b></td><td><%= @contact.office %></td>
+						</tr>
+						<tr>
+							<td><b>Email</b></td><td><%= mail_to @contact.email %></td>
+						</tr>
+			
+						<tr>
+							<td><b>Mensaje</b></td>
+							<td>
+							<%= sanitize(simple_format(@contact.message), :tags => %w(p i br b)) %></td>
+						</tr>
+						
+					
+			</tr>
+		</table>
+		
+		
+		
+			
+		<div class="btn-top">
+			<%= link_to 'Volver', contacts_adminlist_path %>	
+    	</div>
+	</div>
+</div><!-- END: container -->

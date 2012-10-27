@@ -1,7 +1,6 @@
-<%= page_title! "¿Quienes somos?" %>
 <% @whoweares.each do |whoweare| %>
   <h2 class="title">
-           <%= whoweare.title %>
+           <%= page_title! whoweare.title %>
          </h2>
 <%= notice %>
 <% if session[:user_id] %>

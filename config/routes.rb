@@ -11,6 +11,7 @@ Contactocoaching::Application.routes.draw do
     resources :howdowedos
     resources :teams
     resources :whatdowedos
+    resources :contacts
 
     match 'quienes_somos' => 'whoweares#index'
     match "equipo" => "teams#index"

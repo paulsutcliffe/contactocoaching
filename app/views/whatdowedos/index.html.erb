@@ -1,7 +1,6 @@
-<%= page_title! "¿Qué hacemos?" %>
 <% @whatdowedos.each do |whatdowedo| %>
   <h2 class="title">
-           <%= whatdowedo.title %>
+           <%= page_title! whatdowedo.title %>
          </h2>
 <% if session[:user_id] %>
 <%= link_to 'Editar', edit_whatdowedo_path(whatdowedo), :class => 'btn edit' %>

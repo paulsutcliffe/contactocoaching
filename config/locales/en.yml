@@ -1,14 +1,21 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   app:
     name: Contacto Coaching
-  address:
-    index:
-      editar: "Edit"
-  howdowedo:
-  team:
-  whatdowedo:
-  whoweare:
-  client:
+  address: Contact Us
+  howdowedo: How we do it?
+  team: Crew
+  whatdowedo: What we do?
+  whoweare: Who are we?
+  client: Clients
+  video: Videos
+  contact:
+    new:
+      title: Send us a menssage
+      form:
+        name: Name
+        last_name: Last name
+        cell: Cell
+        office: Office
+        email: E-mail
+        message: Message
+        send: Send

@@ -1,13 +1,21 @@
 es:
   app:
     name: Contacto Coaching
-  address:
-    index:
-      editar: "Editar"
-  howdowedo:
-  team:
-  whatdowedo:
-  whoweare:
-  client:
-
-
+  address: Contáctanos
+  howdowedo: ¿Cómo lo hacemos?
+  team: Equipo
+  whatdowedo: ¿Qué hacemos?
+  whoweare: ¿Quiénes somos?
+  client: Clientes
+  video: Videos
+  contact:
+    new:
+      title: Envianos un mensaje
+      form:
+        name: Nombre
+        last_name: Apellido
+        cell: Celular
+        office: Oficina
+        email: E-mail
+        message: Mensaje
+        send: Enviar
