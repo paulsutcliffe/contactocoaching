@@ -220,31 +220,31 @@ ADAPT
 
 #container-bg1,
 #container-bg2,
-.container_12{height:auto !important; height:960px; min-height:960px}
+#container-bg1 .container_12{height:auto !important; height:960px; min-height:960px}
 
-html#range_3 #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png); background-repeat:no-repeat; background-position: 400px -320px}
-html#range_3 #container-bg2{background-image:url(../images/backgrounds/range-3-red.png); background-repeat: no-repeat; background-position: -500px -400px}
+#container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png); background-repeat:no-repeat; background-position: 400px -320px}
+#container-bg2{background-image:url(../images/backgrounds/range-3-red.png); background-repeat: no-repeat; background-position: -500px -400px}
 
 /* HOME */
-html#range_3 #home #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+#home #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
 
 /* QUIENES SOMOS */
-html#range_3 #whoweares #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+#whoweares #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
 
 /* QUÉ HACEMOS */
-html#range_3 #whatdowedos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+#whatdowedos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
 
 /* HOW */
-html#range_3 #how #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+#how #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
 
 /* CLIENTS */
-html#range_3 #clients #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+#clients #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
 
 /* CLIENTS */
-html#range_3 #teams #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
+#teams #container-bg1{background-image:url(../images/backgrounds/range-3-yellow.png)}
 
 /* VIDEOS */
-html#range_3 #videos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
+#videos #container-bg1{background-image:url(../images/backgrounds/range-3-cyan.png)}
 
 
 
@@ -302,6 +302,10 @@ PREFACE-TOP
 */
 
 #preface-top{height:150px}
+
+#author{float:right; padding:10px 0 20px; text-align:right; font-family:'ClarendonBlkBTBlack'}
+#author span{display:inline-block; *display:inline; *zoom:1; margin:8px 5px 0 0; color:#555; font-size:13px; float:left}
+#author a{float:right}
 
 /*
 =============================================
