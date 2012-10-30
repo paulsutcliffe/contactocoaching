@@ -1,7 +1,7 @@
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= pluralize(@contact.errors.count, "error") %> evitaron que el mensaje fuese enviado.</h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |msg| %>
@@ -11,34 +11,34 @@
     </div>
   <% end %>
 
-<fieldset></fieldset>
 
-<div class="grid_7 alpha">
+
+<div>
   <div class="field">
-    <%= f.label :name, I18n.translate('contact.new.form.name') %><br />
+    <%= f.label :name, I18n.translate('contact.new.form.name') %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :last_name, I18n.translate('contact.new.form.last_name') %><br />
+    <%= f.label :last_name, I18n.translate('contact.new.form.last_name') %>
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :cell, I18n.translate('contact.new.form.cell') %><br />
+    <%= f.label :cell, I18n.translate('contact.new.form.cell') %>
     <%= f.text_field :cell %>
   </div>
   <div class="field">
-    <%= f.label :office, I18n.translate('contact.new.form.office') %><br />
+    <%= f.label :office, I18n.translate('contact.new.form.office') %>
     <%= f.text_field :office %>
   </div>
   <div class="field">
-    <%= f.label :email, I18n.translate('contact.new.form.email') %><br />
+    <%= f.label :email, I18n.translate('contact.new.form.email') %>
     <%= f.text_field :email %>
   </div>
 </div>
-<div class="grid_7 omega">
+<div>
   <div class="field">
-    <%= f.label :message, I18n.translate('contact.new.form.message') %><br />
-    <%= f.text_area :message %>
+    <%= f.label :message, I18n.translate('contact.new.form.message') %>
+    <%= f.text_area :message, :rows => 10 %>
   </div>
   <div class="actions">
     <%= f.submit I18n.translate('contact.new.form.send') %>
