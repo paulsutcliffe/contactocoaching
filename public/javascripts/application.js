@@ -5,7 +5,7 @@
 
 
 $(function() {	
-  $( "#accordion" ).accordion();
+  $( "#accordion" ).accordion({active:false});
 
 
 });
